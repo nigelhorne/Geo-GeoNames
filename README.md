@@ -37,7 +37,7 @@ access to the free web service:
 Provides a perl interface to the webservices found at
 [http://api.geonames.org](http://api.geonames.org). That is, given a given placename or
 postalcode, the module will look it up and return more information
-(longitude, lattitude, etc) for the given placename or postalcode.
+(longitude, latitude, etc) for the given placename or postalcode.
 Wikipedia lookups are also supported. If more than one match is found,
 a list of locations will be returned.
 
@@ -457,11 +457,11 @@ encoded. So make sure that strings are encoded/decoded based on the
 correct encoding.
 
 Please report any bugs found or feature requests through GitHub issues
-[https://https://github.com/nigelhorne/Geo-Geonames/issues](https://https://github.com/nigelhorne/Geo-Geonames/issues).
+[https://github.com/nigelhorne/Geo-GeoNames/issues](https://github.com/nigelhorne/Geo-GeoNames/issues).
 or
 `bug-geo-geonamnes at rt.cpan.org`,
 or through the web interface at
-[http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-Geonames](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-Geonames).
+[http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-GeoNames](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-GeoNames).
 I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
@@ -473,7 +473,7 @@ automatically be notified of progress on your bug as I make changes.
 # SOURCE AVAILABILITY
 
 The source code for this module is available from Github
-at [https://github.com/nigelhorne/Geo-Geonames](https://github.com/nigelhorne/Geo-Geonames).
+at [https://github.com/nigelhorne/Geo-GeoNames](https://github.com/nigelhorne/Geo-GeoNames).
 
 # AUTHOR
 

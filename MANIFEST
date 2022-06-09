@@ -8,8 +8,10 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 README.md
 README.pod
+t/comment-spelling.t
 t/json.t
 t/pod-coverage.t
+t/pod-spelling.t
 t/pod.t
 t/url.t
 t/useragent.t

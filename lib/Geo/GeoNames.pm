@@ -298,7 +298,7 @@ sub _build_request_url {
 		$request_url .= join('', map { "$key=$_&" } sort @vals );
 		}
 
-	chop($request_url); # loose the trailing &
+	chop($request_url); # lose the trailing &
 	return $request_url;
 	}
 
@@ -468,7 +468,7 @@ L<http://www.geonames.org/enablefreewebservice>
 Provides a perl interface to the webservices found at
 L<http://api.geonames.org>. That is, given a given placename or
 postalcode, the module will look it up and return more information
-(longitude, lattitude, etc) for the given placename or postalcode.
+(longitude, latitude, etc) for the given placename or postalcode.
 Wikipedia lookups are also supported. If more than one match is found,
 a list of locations will be returned.
 
