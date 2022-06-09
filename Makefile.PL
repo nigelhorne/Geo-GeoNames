@@ -58,14 +58,10 @@ my %WriteMakefile = (
 		'File::Spec::Functions' => '0',
 		},
 
-	'BUILD_REQUIRES' => {
-		},
-
+	'BUILD_REQUIRES' => { },
 	'TEST_REQUIRES' => {
-		'Test::More' => '1',
-		},
-
-	'PREREQ_PM'      => {
+		'Test::Most' => 0,
+	}, 'PREREQ_PM'      => {
 		'XML::Simple'     => '2.13',
 		'Mojo::UserAgent' => '0',
 		'JSON'            => '1.14',
