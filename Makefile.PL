@@ -97,7 +97,7 @@ sub do_it {
 
 	unless( exists $ENV{GEONAMES_USER} ) {
 		print <<"HERE";
-	To test Geo::GeoNames, you need a a GeoNames account enabled at least
+	To test Geo::GeoNames, you need a GeoNames account enabled at least
 	for free access. Start at http://www.geonames.org/login to create a
 	new account. Set GEONAMES_USER to run the tests.
 HERE
