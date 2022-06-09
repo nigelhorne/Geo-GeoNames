@@ -16,10 +16,10 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          # - macos-11
-          # - macos-10.15
-          # - ubuntu-20.04
-          # - ubuntu-18.04
+          - macos-11
+          - macos-10.15
+          - ubuntu-20.04
+          - ubuntu-18.04
           - windows-2022
           - windows-2019
         perl: ['5.34', '5.32', '5.30', '5.28']
@@ -39,6 +39,5 @@ jobs:
       - name: Run Tests
         run: |
           prove -l -b t
-          type C:\Users\RUNNER~1\.cpanm\work\*\build.log
         env:
           AUTHOR_TESTING: 1
