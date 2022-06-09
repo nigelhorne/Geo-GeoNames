@@ -892,7 +892,13 @@ encoded. So make sure that strings are encoded/decoded based on the
 correct encoding.
 
 Please report any bugs found or feature requests through GitHub issues
-L<https://github.com/briandfoy/geo-geonames/issues>
+L<https://https://github.com/nigelhorne/Geo-Geonames/issues>.
+or
+C<bug-geo-geonamnes at rt.cpan.org>,
+or through the web interface at
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-Geonames>.
+I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
 
 =head1 SEE ALSO
 
@@ -907,18 +913,21 @@ L<https://github.com/briandfoy/geo-geonames/issues>
 =head1 SOURCE AVAILABILITY
 
 The source code for this module is available from Github
-at L<https://github.com/briandfoy/geo-geonames>
+at L<https://github.com/nigelhorne/Geo-Geonames>.
 
 =head1 AUTHOR
 
 Per Henrik Johansen, C<< <per.henrik.johansen@gmail.com> >>.
 
-Currently maintained by brian d foy, C<< <brian.d.foy@gmail.com> >>
+Previously maintained by brian d foy, C<< <brian.d.foy@gmail.com> >>
 and Nicolas Mendoza, C<< <mendoza@pvv.ntnu.no> >>
+
+Maintained by Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright © 2007-2021 by Per Henrik Johansen
+Copyright © 2022 by Nigel Horne
 
 This library is available under the Artistic License 2.0.
 
