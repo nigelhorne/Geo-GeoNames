@@ -8,6 +8,14 @@ use Carp;
 use Mojo::UserAgent;
 use Scalar::Util qw/blessed/;
 
+=encoding utf8
+
+=head1 NAME
+
+Geo::GeoNames - Perform geographical queries using GeoNames Web Services
+
+=cut
+
 use vars qw($DEBUG $CACHE);
 
 our $VERSION = '1.13';
@@ -237,13 +245,28 @@ sub username {
 	$self->{username};
 	}
 
+=head2 ua
+
+Accessor method to get and set UserAgent object used internally. You
+can call I<env_proxy> for example, to get the proxy information from
+environment variables:
+
+    $geo_coder->ua()->env_proxy(1);
+
+You can also set your own User-Agent object:
+
+    use LWP::UserAgent::Throttled;
+    $geo_coder->ua(LWP::UserAgent::Throttled->new());
+
+=cut
+
 sub ua {
-	my( $self, $ua ) = @_;
-
-	$self->{ua} = $ua if @_ == 2;
-
-	$self->{ua};
+	my $self = shift;
+	if (@_) {
+		$self->{ua} = shift;
 	}
+	$self->{ua};
+}
 
 sub default_ua {
 	my $ua = Mojo::UserAgent->new;
@@ -421,12 +444,6 @@ sub DESTROY { 1 }
 1;
 
 __END__
-
-=encoding utf8
-
-=head1 NAME
-
-Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
 =head1 SYNOPSIS
 
