@@ -38,7 +38,7 @@ jobs:
           cpanm -iqn --skip-satisfied --installdeps --notest .
       - name: Run Tests
         run: |
-	  prove -l -b t
-	  type C:\Users\RUNNER~1\.cpanm\work\*\build.log
+          prove -l -b t
+          type C:\Users\RUNNER~1\.cpanm\work\*\build.log
         env:
           AUTHOR_TESTING: 1
