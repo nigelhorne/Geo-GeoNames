@@ -33,6 +33,7 @@ jobs:
       - run: perl -V
       - name: Install Dependencies
         run: |
+          sudo apt-get install expat libexpat1-dev
           cpanm -iqn --skip-satisfied File::Spec ExtUtils::MakeMaker
           cpanm -iqn --skip-satisfied Test::Portability::Files Test::Taint Test::Compile Test::Pod::Coverage
           cpanm -iqn --skip-satisfied --installdeps --notest .
