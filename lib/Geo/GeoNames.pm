@@ -892,11 +892,11 @@ encoded. So make sure that strings are encoded/decoded based on the
 correct encoding.
 
 Please report any bugs found or feature requests through GitHub issues
-L<https://https://github.com/nigelhorne/Geo-Geonames/issues>.
+L<https://github.com/nigelhorne/Geo-GeoNames/issues>.
 or
 C<bug-geo-geonamnes at rt.cpan.org>,
 or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-Geonames>.
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Geo-GeoNames>.
 I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
@@ -913,7 +913,7 @@ automatically be notified of progress on your bug as I make changes.
 =head1 SOURCE AVAILABILITY
 
 The source code for this module is available from Github
-at L<https://github.com/nigelhorne/Geo-Geonames>.
+at L<https://github.com/nigelhorne/Geo-GeoNames>.
 
 =head1 AUTHOR
 
