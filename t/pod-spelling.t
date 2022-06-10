@@ -35,3 +35,4 @@ placename
 postalcode
 GeoNames
 lng
+ua
