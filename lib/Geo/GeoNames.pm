@@ -14,11 +14,15 @@ use Scalar::Util qw/blessed/;
 
 Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
+=head1 VERSION
+
+Version 1.14
+
 =cut
 
-use vars qw($DEBUG $CACHE);
+our $VERSION = '1.14';
 
-our $VERSION = '1.13';
+use vars qw($DEBUG $CACHE);
 
 our %searches = (
 	cities                              => 'cities?',

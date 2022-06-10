@@ -2,6 +2,23 @@
 
 Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
+# VERSION
+
+Version 1.14
+
+## ua
+
+Accessor method to get and set UserAgent object used internally. You
+can call _env\_proxy_ for example, to get the proxy information from
+environment variables:
+
+    $geo_coder->ua()->env_proxy(1);
+
+You can also set your own User-Agent object:
+
+    use LWP::UserAgent::Throttled;
+    $geo_coder->ua(LWP::UserAgent::Throttled->new());
+
 # SYNOPSIS
 
         use Geo::GeoNames;
