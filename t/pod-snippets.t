@@ -11,7 +11,7 @@ if($ENV{AUTHOR_TESTING}) {
 	if($@) {
 		plan(skip_all => 'Test::Pod::Snippets required for testing POD code snippets');
 	} else {
-		my @modules = qw/ CGI::Info /;
+		my @modules = qw/ Geo::GeoNames /;
 
 		Test::Pod::Snippets->new()->runtest(module => $_, testgroup => 1) for @modules;
 
