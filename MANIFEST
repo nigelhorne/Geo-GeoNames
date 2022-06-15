@@ -19,5 +19,6 @@ t/pod.t
 t/url.t
 t/useragent.t
 t/username.t
+t/vars.t
 t/xml.t
 xt/changes.t

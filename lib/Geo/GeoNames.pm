@@ -361,9 +361,9 @@ sub _parse_xml_result {
 sub _parse_json_result {
 	require JSON;
 	my( $self, $geonamesresponse ) = @_;
-	my @result;
+
 	return JSON->new->utf8->decode($geonamesresponse);
-	}
+}
 
 sub _parse_text_result {
 	my( $self, $geonamesresponse ) = @_;
@@ -432,7 +432,8 @@ sub geocode {
 
 sub AUTOLOAD {
 	my $self = shift;
-	my $type = ref($self) || croak "$self is not an object";
+	# my $type = ref($self) || croak "$self is not an object";
+	ref($self) || croak "$self is not an object";
 	my $name = our $AUTOLOAD;
 	$name =~ s/.*://;
 
