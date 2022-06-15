@@ -499,8 +499,8 @@ a list of locations will be returned.
 
 =item new
 
-	$geo = Geo::GeoNames->new( username => '...' )
-	$geo = Geo::GeoNames->new( username => '...', url => $url )
+	$geo = Geo::GeoNames->new( username => '...' );
+	$geo = Geo::GeoNames->new( username => '...', url => $url );
 
 Constructor for Geo::GeoNames. It returns a reference to an
 Geo::GeoNames object. You may also pass the url of the webservices to
