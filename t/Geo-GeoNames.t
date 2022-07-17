@@ -3,11 +3,11 @@ use strict;
 use warnings;
 
 unless( defined $ENV{GEONAMES_USER} and length $ENV{GEONAMES_USER} ) {
-	warn "Define GEONAMES_USER to test Geo::GeoNames\n";
+	warn 'Define GEONAMES_USER to test Geo::GeoNames';
 	pass();
 	done_testing();
 	exit;
-	}
+}
 
 my $class = 'Geo::GeoNames';
 use_ok( $class );
