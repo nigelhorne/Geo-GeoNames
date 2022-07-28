@@ -373,11 +373,13 @@ sub _parse_text_result {
 	}
 
 sub _request {
-	my( $self, $request_url ) = @_;
+	my ($self, $request_url) = @_;
 
-	my $res = $self->{ua}->get( $request_url );
-	return $res->can('res') ? $res->res : $res;
-	}
+	# print ">>>>>>>>>$request_url\n";
+	my $res = $self->{ua}->get($request_url);
+
+	return $res->can('res') ? $res->res() : $res;
+}
 
 sub _do_search {
 	my( $self, $searchtype, @args ) = @_;
@@ -389,13 +391,7 @@ sub _do_search {
 	# we accept text/xml, text/plain (how do see if it is JSON or not?)
 	my $mime_type = $response->headers->content_type || '';
 
-	my $body = '';
-	if ($response->can('body')) {
-		$body = $response->body;
-		}
-	else {
-		$body = $response->content;
-	}
+	my $body = $response->can('body') ? $response->body() : $response->content;
 
 	if($mime_type =~ m(\Atext/xml;?) ) {
 		return $self->_parse_xml_result( $body, $searchtype eq 'get' );
