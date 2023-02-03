@@ -359,10 +359,10 @@ sub _parse_xml_result {
 	}
 
 sub _parse_json_result {
-	require JSON;
+	require JSON::MaybeXS;
 	my( $self, $geonamesresponse ) = @_;
 
-	return JSON->new->utf8->decode($geonamesresponse);
+	return JSON::MaybeXS->new->utf8->decode($geonamesresponse);
 }
 
 sub _parse_text_result {
@@ -945,7 +945,7 @@ Maintained by Nigel Horne, C<< <njh at bandsman.co.uk> >>
 =head1 COPYRIGHT AND LICENSE
 
 Copyright © 2007-2021 by Per Henrik Johansen
-Copyright © 2022 by Nigel Horne
+Copyright (C) 2022-2023 by Nigel Horne
 
 This library is available under the Artistic License 2.0.
 

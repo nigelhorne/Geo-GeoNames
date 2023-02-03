@@ -64,8 +64,8 @@ my %WriteMakefile = (
 	}, 'PREREQ_PM'      => {
 		'XML::Simple'     => '2.13',
 		'Mojo::UserAgent' => '0',
-		'JSON'            => '1.14',
-		},
+		'JSON::MaybeXS'	  => 0,
+	},
 
 	'META_MERGE' => {
 		'meta-spec' => { version => 2 },

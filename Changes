@@ -1,5 +1,8 @@
 Revision history for Perl module Geo::GeoNames
 
+1.15
+	Use JSON::MaybeXS instead of JSON
+
 1.14	Fri Jun 10 05:08:22 EDT 2022
 	Start to use Test::Most
 
