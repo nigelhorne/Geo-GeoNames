@@ -36,6 +36,12 @@ jobs:
           cpanm -iqn --skip-satisfied Test::Portability::Files Test::Taint Test::Compile Test::Pod::Coverage
           cpanm -iqn XML::Parser
           cpanm -iqn --skip-satisfied --installdeps --notest .
+      - name: Make module
+        run: |
+          # find ~ -name build.log | xargs cat
+          cd $GITHUB_WORKSPACE
+          perl Makefile.PL
+          make
       - name: Run Tests
         run: |
           prove -l -b t
