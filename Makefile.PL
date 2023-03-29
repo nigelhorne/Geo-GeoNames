@@ -66,7 +66,6 @@ my %WriteMakefile = (
 		'Mojo::UserAgent' => '0',
 		'JSON::MaybeXS'	  => 0,
 	},
-
 	'META_MERGE' => {
 		'meta-spec' => { version => 2 },
 		keywords => [ qw(geo geonames) ],
@@ -114,8 +113,7 @@ HERE
 	eval "require $minimum_perl;" or die $@;
 
 	WriteMakefile( %$arguments );
-	}
-
+}
 
 no warnings;
 __PACKAGE__;
