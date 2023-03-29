@@ -15,12 +15,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Don't test on Windows since XML::Parser needs Expat
         os:
           - macos-latest
           - ubuntu-22.04
           - ubuntu-20.04
-          - windows-2022
-          - windows-2019
+          # - windows-2022
+          # - windows-2019
         perl: ['5.36', '5.34', '5.32', '5.30', '5.28', '5.22']
     name: Perl ${{ matrix.perl }} on ${{ matrix.os }}
     steps:
@@ -35,11 +36,11 @@ jobs:
         run: |
           cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied Test::Portability::Files Test::Taint Test::Compile Test::Pod::Coverage
-          cpanm -iv Mojo::UserAgent Expat XML::Simple XML::Parser
+          # cpanm -iv Mojo::UserAgent Expat XML::Simple XML::Parser
           cpanm -iqn --skip-satisfied --installdeps --notest .
       - name: Make Module
         run: |
-          find . -name build.log | xargs cat
+          # find . -name build.log | xargs cat
           perl Makefile.PL
           make
       - name: Run Tests
