@@ -35,7 +35,7 @@ jobs:
         run: |
           cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied Test::Portability::Files Test::Taint Test::Compile Test::Pod::Coverage
-          cpanm -iv Expat XML::Simple XML::Parser
+          cpanm -iv Mojo::UserAgent Expat XML::Simple XML::Parser
           cpanm -iqn --skip-satisfied --installdeps --notest .
       - name: Make Module
         run: |
