@@ -337,9 +337,9 @@ sub _parse_xml_result {
 	my $xml = $xmlsimple->XMLin( $geonamesresponse, KeyAttr => [], ForceArray => 1 );
 
 	if ($xml->{'status'}) {
-		carp "GeoNames error: " . $xml->{'status'}->[0]->{message};
+		carp 'GeoNames error: ', $xml->{'status'}->[0]->{message};
 		return [];
-		}
+	}
 
 	$xml = { geoname => [ $xml ], totalResultsCount => '1' } if $single_result;
 
