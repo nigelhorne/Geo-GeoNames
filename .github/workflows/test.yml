@@ -31,6 +31,7 @@ jobs:
           perl-version: ${{ matrix.perl }}
       - run: perl -V
       - name: Install Dependencies
+        continue-on-error: true
         run: |
           cpanm -iqn ExtUtils::MakeMaker Test::Most
           cpanm -iqn --skip-satisfied Test::Portability::Files Test::Taint Test::Compile Test::Pod::Coverage
@@ -38,7 +39,7 @@ jobs:
           cpanm -iqn --skip-satisfied --installdeps --notest .
       - name: Make module
         run: |
-          # find ~ -name build.log | xargs cat
+          find ~ -name build.log | xargs cat
           cd $GITHUB_WORKSPACE
           perl Makefile.PL
           make
