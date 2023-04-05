@@ -1,5 +1,7 @@
 #!/usr/bin/env perl
 
+# Test translating location into TZ
+
 use strict;
 use warnings;
 use Test::Most tests => 5;
