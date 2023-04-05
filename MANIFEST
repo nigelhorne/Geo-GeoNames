@@ -16,6 +16,7 @@ t/pod-coverage.t
 t/pod-snippets.t
 t/pod-spelling.t
 t/pod.t
+t/tz.t
 t/url.t
 t/useragent.t
 t/username.t
