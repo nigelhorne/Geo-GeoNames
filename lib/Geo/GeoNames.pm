@@ -22,6 +22,50 @@ Version 1.14
 
 our $VERSION = '1.14';
 
+=head1 SYNOPSIS
+
+	use Geo::GeoNames;
+	my $geo = Geo::GeoNames->new( username => $username );
+
+	# make a query based on placename
+	my $result = $geo->search(q => 'Fredrikstad', maxRows => 2);
+
+	# print the first result
+	print ' Name: ', $result->[0]->{name}, "\n";
+	print ' Longitude: ', $result->[0]->{lng}, "\n";
+	print ' Lattitude: ', $result->[0]->{lat}, "\n";
+
+	# Make a query based on postcode
+	$result = $geo->postalcode_search(
+		postalcode => '1630', maxRows => 3, style => 'FULL'
+	);
+
+=head1 DESCRIPTION
+
+Before you start, get a free GeoNames account and enable it for
+access to the free web service:
+
+=over 4
+
+=item * Get an account
+
+Go to L<http://www.geonames.org/login>
+
+=item * Respond to the email
+
+=item * Login and enable your account for free access
+
+L<http://www.geonames.org/enablefreewebservice>
+
+=back
+
+Provides a perl interface to the webservices found at
+L<http://api.geonames.org>. That is, given a given placename or
+postalcode, the module will look it up and return more information
+(longitude, latitude, etc) for the given placename or postalcode.
+Wikipedia lookups are also supported. If more than one match is found,
+a list of locations will be returned.
+
 use vars qw($DEBUG $CACHE);
 
 our %searches = (
@@ -216,6 +260,8 @@ our %valid_parameters = (
 		style     => 'o',
 		},
 	);
+
+=cut
 
 sub new {
 	my( $class, %hash ) = @_;
@@ -446,51 +492,7 @@ sub DESTROY { 1 }
 
 __END__
 
-=head1 SYNOPSIS
-
-	use Geo::GeoNames;
-	my $geo = Geo::GeoNames->new( username => $username );
-
-	# make a query based on placename
-	my $result = $geo->search(q => 'Fredrikstad', maxRows => 2);
-
-	# print the first result
-	print " Name: " . $result->[0]->{name};
-	print " Longitude: " . $result->[0]->{lng};
-	print " Lattitude: " . $result->[0]->{lat};
-
-	# Make a query based on postcode
-	my $result = $geo->postalcode_search(
-		postalcode => "1630", maxRows => 3, style => "FULL"
-		);
-
-=head1 DESCRIPTION
-
-Before you start, get a free GeoNames account and enable it for
-access to the free web service:
-
-=over 4
-
-=item * Get an account
-
-Go to L<http://www.geonames.org/login>
-
-=item * Respond to the email
-
-=item * Login and enable your account for free access
-
-L<http://www.geonames.org/enablefreewebservice>
-
-=back
-
-Provides a perl interface to the webservices found at
-L<http://api.geonames.org>. That is, given a given placename or
-postalcode, the module will look it up and return more information
-(longitude, latitude, etc) for the given placename or postalcode.
-Wikipedia lookups are also supported. If more than one match is found,
-a list of locations will be returned.
-
-=head1 METHODS
+=head1 SUBROUTINES/METHODS
 
 =over 4
 
