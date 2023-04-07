@@ -66,6 +66,8 @@ postalcode, the module will look it up and return more information
 Wikipedia lookups are also supported. If more than one match is found,
 a list of locations will be returned.
 
+=cut
+
 use vars qw($DEBUG $CACHE);
 
 our %searches = (
@@ -261,8 +263,6 @@ our %valid_parameters = (
 		},
 	);
 
-=cut
-
 sub new {
 	my( $class, %hash ) = @_;
 
@@ -282,7 +282,7 @@ HERE
 
 	(exists($hash{debug})) ? $DEBUG = $hash{debug} : 0;
 	(exists($hash{cache})) ? $CACHE = $hash{cache} : 0;
-	$self->{_functions} = \%searches;
+	# $self->{_functions} = \%searches;
 
 	return $self;
 	}
