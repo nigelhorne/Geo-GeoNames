@@ -15,7 +15,7 @@ SKIP: {
 	if(my $user = $ENV{'GEONAMES_USER'}) {
 		my $geo = new_ok('Geo::GeoNames' => [ username => $user ]);
 
-		my $result = $geo->search(q => 'Laurel', country => 'US', style => 'FULL');
+		my $result = $geo->search(q => 'Laurel, MD', country => 'US', style => 'FULL');
 
 		diag(Data::Dumper->new([$result])->Dump()) if($ENV{'TEST_VERBOSE'});
 
