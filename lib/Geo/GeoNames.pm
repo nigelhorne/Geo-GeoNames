@@ -1,5 +1,5 @@
 package Geo::GeoNames;
-use utf8;
+# use utf8;
 use v5.10;
 use strict;
 use warnings;

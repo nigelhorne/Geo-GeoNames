@@ -1,8 +1,10 @@
-use Test::More 0.94;
+#!/usr/bin/env perl
+
 use strict;
 use warnings;
+use Test::More 0.94;
 
-unless( defined $ENV{GEONAMES_USER} and length $ENV{GEONAMES_USER} ) {
+unless(defined $ENV{GEONAMES_USER} and length $ENV{GEONAMES_USER}) {
 	warn 'Define GEONAMES_USER to test Geo::GeoNames';
 	pass();
 	done_testing();
