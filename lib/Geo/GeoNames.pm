@@ -68,7 +68,7 @@ a list of locations will be returned.
 
 =cut
 
-use vars qw($DEBUG $CACHE);
+# use vars qw($DEBUG $CACHE);
 
 our %searches = (
 	cities                              => 'cities?',
@@ -280,8 +280,8 @@ HERE
 	   if exists $hash{ua} && !(ref $hash{ua} && blessed($hash{ua}) && ( $hash{ua}->isa('Mojo::UserAgent') || $hash{ua}->isa('LWP::UserAgent') ) );
 	$self->ua($hash{ua} || $self->default_ua );
 
-	(exists($hash{debug})) ? $DEBUG = $hash{debug} : 0;
-	(exists($hash{cache})) ? $CACHE = $hash{cache} : 0;
+	# (exists($hash{debug})) ? $DEBUG = $hash{debug} : 0;
+	# (exists($hash{cache})) ? $CACHE = $hash{cache} : 0;
 	# $self->{_functions} = \%searches;
 
 	return $self;
