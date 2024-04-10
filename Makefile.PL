@@ -62,6 +62,7 @@ my %WriteMakefile = (
 	'TEST_REQUIRES' => {
 		'Test::Most' => 0,
 		'Test::NoWarnings' => 0,
+		'Test::Needs'
 	}, 'PREREQ_PM'      => {
 		'XML::Simple'     => '2.13',
 		'Mojo::UserAgent' => '0',
