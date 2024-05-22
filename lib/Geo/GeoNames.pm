@@ -946,7 +946,7 @@ Maintained by Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright © 2007-2021 by Per Henrik Johansen
+Copyright (C) 2007-2021 by Per Henrik Johansen
 Copyright (C) 2022-2023 by Nigel Horne
 
 This library is available under the Artistic License 2.0.

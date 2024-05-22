@@ -136,7 +136,10 @@ subtest 'country_info' => sub {
 	};
 
 subtest 'country_code' => sub {
-	my $result = $geo->country_code( lng => "10.2", lat => "47.03" );
+	my $result = $geo->country_code(lng => 10.2, lat => 47.03);
+	if($ENV{'TEST_VERBOSE'}) {
+		diag(Data::Dumper->new([$result])->Dump());
+	}
 	ok( defined $result                     , 'country code' );
 	ok( ref $result eq ref []               , 'result is array ref' );
 	ok( exists($result->[0]->{countryCode}) , 'countryCode exists in result' );
