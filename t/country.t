@@ -22,6 +22,6 @@ SKIP: {
 		$result = @{$result}[0];
 		cmp_ok($result->{'countryName'}, 'eq', 'United Kingdom', 'Finds PM house');
 	} else {
-		skip('$ENV{GEONAME_USER} needed to test timezones', 3);
+		skip('$ENV{GEONAME_USER} needed to test finding countries', 2);
 	}
 }
