@@ -9,6 +9,7 @@ MANIFEST.SKIP
 README.md
 README.pod
 t/comment-spelling.t
+t/country.t
 t/eof.t
 t/eol.t
 t/json.t
