@@ -266,14 +266,14 @@ our %valid_parameters = (
 sub new {
 	my( $class, %hash ) = @_;
 
-	my $self = bless { _functions => \%searches }, $class;
+	my $self = bless { _functions => \%searches, %hash }, $class;
 
 	croak <<"HERE" unless length $hash{username};
 You must specify a GeoNames username to use Geo::GeoNames.
 See http://www.geonames.org/export/web-services.html
 HERE
 
-	$self->username( $hash{username} );
+	# $self->username( $hash{username} );
 	$self->url( $hash{url} // $self->default_url );
 
 	croak 'Illegal ua object, needs either a Mojo::UserAgent or an LWP::UserAgent derived object'
@@ -285,7 +285,7 @@ HERE
 	# $self->{_functions} = \%searches;
 
 	return $self;
-	}
+}
 
 sub username {
 	my( $self, $username ) = @_;
