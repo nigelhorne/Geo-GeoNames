@@ -264,24 +264,26 @@ our %valid_parameters = (
 	);
 
 sub new {
-	my( $class, %hash ) = @_;
+	my $proto = shift;
+	my $class = ref($proto) || $proto;
+	my %args = (ref($_[0]) eq 'HASH') ? %{$_[0]} : @_;
 
-	my $self = bless { _functions => \%searches, %hash }, $class;
-
-	croak <<"HERE" unless length $hash{username};
+	croak <<"HERE" unless length $args{username};
 You must specify a GeoNames username to use Geo::GeoNames.
 See http://www.geonames.org/export/web-services.html
 HERE
 
-	# $self->username( $hash{username} );
-	$self->url( $hash{url} // $self->default_url );
+	my $self = bless { _functions => \%searches, %args }, $class;
+
+	# $self->username( $args{username} );
+	$self->url( $args{url} // $self->default_url );
 
 	croak 'Illegal ua object, needs either a Mojo::UserAgent or an LWP::UserAgent derived object'
-	   if exists $hash{ua} && !(ref $hash{ua} && blessed($hash{ua}) && ( $hash{ua}->isa('Mojo::UserAgent') || $hash{ua}->isa('LWP::UserAgent') ) );
-	$self->ua($hash{ua} || $self->default_ua );
+	   if exists $args{ua} && !(ref $args{ua} && blessed($args{ua}) && ( $args{ua}->isa('Mojo::UserAgent') || $args{ua}->isa('LWP::UserAgent') ) );
+	$self->ua($args{ua} || $self->default_ua );
 
-	# (exists($hash{debug})) ? $DEBUG = $hash{debug} : 0;
-	# (exists($hash{cache})) ? $CACHE = $hash{cache} : 0;
+	# (exists($args{debug})) ? $DEBUG = $args{debug} : 0;
+	# (exists($args{cache})) ? $CACHE = $args{cache} : 0;
 	# $self->{_functions} = \%searches;
 
 	return $self;
@@ -318,11 +320,13 @@ sub ua {
 	$self->{ua};
 }
 
-sub default_ua {
-	my $ua = Mojo::UserAgent->new;
+sub default_ua
+{
+	my $ua = Mojo::UserAgent->new();
 	$ua->on( error => sub { carp "Can't get request" } );
-	$ua;
-	}
+	return $ua;
+}
+
 sub default_url { 'http://api.geonames.org' }
 
 sub url {
