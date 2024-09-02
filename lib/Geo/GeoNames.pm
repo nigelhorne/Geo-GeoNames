@@ -264,9 +264,20 @@ our %valid_parameters = (
 	);
 
 sub new {
-	my $proto = shift;
-	my $class = ref($proto) || $proto;
+	my $class = shift;
 	my %args = (ref($_[0]) eq 'HASH') ? %{$_[0]} : @_;
+
+	if(!defined($class)) {
+		# Using Geo::GeoNames->new(), not Geo::GeoNames::new()
+		# carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+		# return;
+
+		# FIXME: this only works when no arguments are given
+		$class = __PACKAGE__;
+	} elsif(ref($class)) {
+		# clone the given object
+		return bless { %{$class}, %args }, ref($class);
+	}
 
 	croak <<"HERE" unless length $args{username};
 You must specify a GeoNames username to use Geo::GeoNames.
