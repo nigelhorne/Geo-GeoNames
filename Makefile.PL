@@ -43,6 +43,15 @@ my $module    = __PACKAGE__;
 my $github    = "https://github.com/nigelhorne/$dist";
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
+my $tar = {
+	COMPRESS => 'gzip -9f',
+	SUFFIX => 'gz'
+};
+
+if($^O eq 'darwin') {
+	$tar->{'TAR'} = 'gtar';
+}
+
 my %WriteMakefile = (
 	'MIN_PERL_VERSION' => '5.010',
 
@@ -60,9 +69,10 @@ my %WriteMakefile = (
 
 	'BUILD_REQUIRES' => { },
 	'TEST_REQUIRES' => {
+		'Test::DescribeMe' => 0,
 		'Test::Most' => 0,
-		'Test::NoWarnings' => 0,
-		'Test::Needs' => 0
+		'Test::Needs' => 0,
+		'Test::NoWarnings' => 0
 	}, 'PREREQ_PM'      => {
 		'XML::Simple'     => '2.13',
 		'Mojo::UserAgent' => '0',
@@ -85,6 +95,7 @@ my %WriteMakefile = (
 		},
 
 	clean => { FILES => "$dist-*" },
+	dist => $tar,
 	);
 
 sub arguments { \%WriteMakefile }
