@@ -306,7 +306,7 @@ sub username {
 	$self->{username} = $username if @_ == 2;
 
 	$self->{username};
-	}
+}
 
 =head2 ua
 
@@ -521,14 +521,6 @@ Geo::GeoNames object. You may also pass the url of the webservices to
 use. The default value is L<http://api.geonames.org> and is the only url,
 to my knowledge, that provides the services needed by this module. The
 username parameter is required.
-
-=item ua( $ua )
-
-With a single argument, set the UserAgent to be used by all API calls
-and return that UserAgent object. Supports L<Mojo::UserAgent> and
- L<LWP::UserAgent> derivatives.
-
-With no arguments, return the current UserAgent used.
 
 =item username( $username )
 
