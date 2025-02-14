@@ -25,7 +25,7 @@ our $VERSION = '1.14';
 =head1 SYNOPSIS
 
 	use Geo::GeoNames;
-	my $geo = Geo::GeoNames->new( username => $username );
+	my $geo = Geo::GeoNames->new(username => $ENV{'GEONAME_USER'});
 
 	# make a query based on placename
 	my $result = $geo->search(q => 'Fredrikstad', maxRows => 2);
@@ -33,7 +33,7 @@ our $VERSION = '1.14';
 	# print the first result
 	print ' Name: ', $result->[0]->{name}, "\n";
 	print ' Longitude: ', $result->[0]->{lng}, "\n";
-	print ' Lattitude: ', $result->[0]->{lat}, "\n";
+	print ' Latitude: ', $result->[0]->{lat}, "\n";
 
 	# Make a query based on postcode
 	$result = $geo->postalcode_search(
@@ -406,9 +406,9 @@ sub _parse_xml_result {
 
 	my $i = 0;
 	foreach my $element (keys %{$xml}) {
-		next if (ref($xml->{$element}) ne "ARRAY");
+		next if (ref($xml->{$element}) ne 'ARRAY');
 		foreach my $list (@{$xml->{$element}}) {
-			next if (ref($list) ne "HASH");
+			next if (ref($list) ne 'HASH');
 			foreach my $attribute (%{$list}) {
 				next if !defined($list->{$attribute}->[0]);
 				$result[$i]->{$attribute} = (scalar @{$list->{$attribute}} == 1 ? $list->{$attribute}->[0] : $list->{$attribute});
