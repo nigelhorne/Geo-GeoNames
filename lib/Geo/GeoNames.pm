@@ -436,7 +436,9 @@ sub _parse_text_result {
 sub _request {
 	my ($self, $request_url) = @_;
 
-	# print ">>>>>>>>>$request_url\n";
+	if($self->{'logger'}) {
+		$self->{'logger'}->trace('> ', ref($self), ": _request: $request_url");
+	}
 	my $res = $self->{ua}->get($request_url);
 
 	return $res->can('res') ? $res->res() : $res;
@@ -499,7 +501,7 @@ sub AUTOLOAD {
 		}
 
 	return($self->_do_search($name, @_));
-	}
+}
 
 sub DESTROY { 1 }
 
