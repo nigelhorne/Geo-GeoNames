@@ -287,7 +287,7 @@ HERE
 	my $self = bless { _functions => \%searches, %args }, $class;
 
 	# $self->username( $args{username} );
-	$self->url( $args{url} // $self->default_url );
+	$self->url( $args{url} // $self->default_url() );
 
 	croak 'Illegal ua object, needs either a Mojo::UserAgent or an LWP::UserAgent derived object'
 	   if exists $args{ua} && !(ref $args{ua} && blessed($args{ua}) && ( $args{ua}->isa('Mojo::UserAgent') || $args{ua}->isa('LWP::UserAgent') ) );
@@ -346,7 +346,7 @@ sub url {
 	$self->{url} = $url if @_ == 2;
 
 	$self->{url};
-	}
+}
 
 sub _build_request_url {
 	my( $self, $request, @args ) = @_;
