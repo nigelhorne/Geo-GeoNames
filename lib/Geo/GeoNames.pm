@@ -720,7 +720,7 @@ Both B<lat> and B<lng> must be supplied to this method.
 For a thorough description of the arguments, see
 L<http://www.geonames.org/export>
 
-=item find_nearby_wikipediaby_postalcode(arg => $arg)
+=item find_nearby_wikipedia_by_postalcode(arg => $arg)
 
 Reverse lookup for Wikipedia articles. Valid names for B<arg> are as
 follows:

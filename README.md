@@ -6,36 +6,23 @@ Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
 Version 1.14
 
-## ua
-
-Accessor method to get and set UserAgent object used internally. You
-can call _env\_proxy_ for example, to get the proxy information from
-environment variables:
-
-    $geo_coder->ua()->env_proxy(1);
-
-You can also set your own User-Agent object:
-
-    use LWP::UserAgent::Throttled;
-    $geo_coder->ua(LWP::UserAgent::Throttled->new());
-
 # SYNOPSIS
 
         use Geo::GeoNames;
-        my $geo = Geo::GeoNames->new( username => $username );
+        my $geo = Geo::GeoNames->new(username => $ENV{'GEONAME_USER'});
 
         # make a query based on placename
         my $result = $geo->search(q => 'Fredrikstad', maxRows => 2);
 
         # print the first result
-        print " Name: " . $result->[0]->{name};
-        print " Longitude: " . $result->[0]->{lng};
-        print " Lattitude: " . $result->[0]->{lat};
+        print ' Name: ', $result->[0]->{name}, "\n";
+        print ' Longitude: ', $result->[0]->{lng}, "\n";
+        print ' Latitude: ', $result->[0]->{lat}, "\n";
 
         # Make a query based on postcode
-        my $result = $geo->postalcode_search(
-                postalcode => "1630", maxRows => 3, style => "FULL"
-                );
+        $result = $geo->postalcode_search(
+                postalcode => '1630', maxRows => 3, style => 'FULL'
+        );
 
 # DESCRIPTION
 
@@ -58,26 +45,31 @@ postalcode, the module will look it up and return more information
 Wikipedia lookups are also supported. If more than one match is found,
 a list of locations will be returned.
 
-# METHODS
+## ua
+
+Accessor method to get and set UserAgent object used internally. You
+can call _env\_proxy_ for example, to get the proxy information from
+environment variables:
+
+    $geo_coder->ua()->env_proxy(1);
+
+You can also set your own User-Agent object:
+
+    use LWP::UserAgent::Throttled;
+    $geo_coder->ua(LWP::UserAgent::Throttled->new());
+
+# SUBROUTINES/METHODS
 
 - new
 
-            $geo = Geo::GeoNames->new( username => '...' )
-            $geo = Geo::GeoNames->new( username => '...', url => $url )
+            $geo = Geo::GeoNames->new( username => '...' );
+            $geo = Geo::GeoNames->new( username => '...', url => $url );
 
     Constructor for Geo::GeoNames. It returns a reference to an
     Geo::GeoNames object. You may also pass the url of the webservices to
     use. The default value is [http://api.geonames.org](http://api.geonames.org) and is the only url,
     to my knowledge, that provides the services needed by this module. The
     username parameter is required.
-
-- ua( $ua )
-
-    With a single argument, set the UserAgent to be used by all API calls
-    and return that UserAgent object. Supports [Mojo::UserAgent](https://metacpan.org/pod/Mojo%3A%3AUserAgent) and
-     [LWP::UserAgent](https://metacpan.org/pod/LWP%3A%3AUserAgent) derivatives.
-
-    With no arguments, return the current UserAgent used.
 
 - username( $username )
 
@@ -275,7 +267,7 @@ a list of locations will be returned.
     For a thorough description of the arguments, see
     [http://www.geonames.org/export](http://www.geonames.org/export)
 
-- find\_nearby\_wikipediaby\_postalcode(arg => $arg)
+- find\_nearby\_wikipedia\_by\_postalcode(arg => $arg)
 
     Reverse lookup for Wikipedia articles. Valid names for **arg** are as
     follows:
@@ -503,7 +495,7 @@ Maintained by Nigel Horne, `<njh at bandsman.co.uk>`
 
 # COPYRIGHT AND LICENSE
 
-Copyright © 2007-2021 by Per Henrik Johansen
-Copyright © 2022 by Nigel Horne
+Copyright (C) 2007-2021 by Per Henrik Johansen
+Copyright (C) 2022-2023 by Nigel Horne
 
 This library is available under the Artistic License 2.0.
