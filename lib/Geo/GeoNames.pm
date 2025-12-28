@@ -468,7 +468,10 @@ sub _do_search {
 	my( $self, $searchtype, @args ) = @_;
 
 	my $request_url = $self->_build_request_url( $searchtype, @args );
-	my $response = $self->_request( $request_url );
+	my $response = $self->_request($request_url);
+
+	# Return empty array if request failed
+	return [] unless defined $response;
 
 	# check mime-type to determine which parse method to use.
 	# we accept text/xml, text/plain (how do see if it is JSON or not?)
@@ -478,7 +481,7 @@ sub _do_search {
 
 	if($mime_type =~ m(\Atext/xml;?) ) {
 		return $self->_parse_xml_result( $body, $searchtype eq 'get' );
-		}
+	}
 	if($mime_type =~ m(\Aapplication/json;?) ) {
 		# a JSON object always start with a left-brace {
 		# according to http://json.org/
@@ -490,8 +493,8 @@ sub _do_search {
 			}
 		} else {
 			return $self->_parse_text_result( $body );
-			}
 		}
+	}
 
 	if($mime_type eq 'text/plain') {
 		carp 'Invalid mime type [text/plain]. ', $response->content();
@@ -505,7 +508,7 @@ sub _do_search {
 sub geocode {
 	my( $self, $q ) = @_;
 	$self->search( 'q' => $q );
-	}
+}
 
 sub AUTOLOAD {
 	my $self = shift;
