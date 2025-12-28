@@ -241,7 +241,7 @@ our %valid_parameters = (
 		east            => 'r',
 		west            => 'r',
 		date            => 'o',
-		minMagnutide    => 'o',
+		minMagnitude    => 'o',
 		maxRows         => 'o',
 		username        => 'r',
 		},

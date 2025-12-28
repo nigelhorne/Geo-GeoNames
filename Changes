@@ -5,6 +5,7 @@ Revision history for Perl module Geo::GeoNames
 	Calling new on an object now returns a clone rather than setting the defaults in the new object
 	Use Test::DescribeMe to simplify tests
 	Use Test::RequiresInternet
+	Fixed typo (minMagnutide now says minMagnitude)
 
 1.14	Fri Jun 10 05:08:22 EDT 2022
 	Start to use Test::Most
