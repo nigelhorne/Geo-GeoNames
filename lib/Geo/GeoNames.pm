@@ -473,6 +473,13 @@ sub _do_search {
 	# Return empty array if request failed
 	return [] unless defined $response;
 
+	# Verify HTTP status code
+	my $status_code = $response->code();
+	unless ($status_code >= 200 && $status_code < 300) {
+		carp "HTTP error: received status code $status_code for URL: $request_url";
+		return [];
+	}
+
 	# check mime-type to determine which parse method to use.
 	# we accept text/xml, text/plain (how do see if it is JSON or not?)
 	my $mime_type = $response->headers->content_type || '';
