@@ -84,13 +84,29 @@
 
 <tbody>
 
-<tr class="low"><td><a href="blib-lib-Geo-GeoNames-pm.html" title="View coverage line by line" target="_blank">blib/lib/Geo/GeoNames.pm</a> <a href="https://github.com/nigelhorne/Geo-GeoNames/blob/8442bcfd49f89114ea0d9c6af10e7d40c7827946/blib/lib/Geo/GeoNames.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points=""></canvas></td><td>75.0</td><td>55.3</td><td>53.5</td><td>87.0</td><td><span class="coverage-badge badge-bad" title="Needs improvement">67.9%</span></td><td class="neutral" title="No previous data">&#9679;</td></tr>
+<tr class="low"><td><a href="blib-lib-Geo-GeoNames-pm.html" title="View coverage line by line" target="_blank">blib/lib/Geo/GeoNames.pm</a> <a href="https://github.com/nigelhorne/Geo-GeoNames/blob/7dda4dc40894f594b68c1309506e6e7cf297aabb/blib/lib/Geo/GeoNames.pm" class="icon-link" title="View source on GitHub">&#128269;</a><canvas class="sparkline" width="80" height="20" data-points="67.9"></canvas></td><td>75.0</td><td>55.3</td><td>53.5</td><td>87.0</td><td><span class="coverage-badge badge-bad" title="Needs improvement">67.9%</span></td><td class="neutral" title="Previous: 67.9%">&#9679; 0.0%</td></tr>
 
 <tr class="summary-row nosort"><td colspan="2"><strong>Summary</strong></td><td colspan="2">1 files</td><td colspan="3">Avg: 67%, Low: 1</td></tr>
 
 <tr class="med nosort"><td><strong>Total</strong></td><td>75.0</td><td>55.3</td><td>53.5</td><td>87.0</td><td colspan="2"><strong>67.9</strong></td></tr>
 
 </tbody></table>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1em;">
+	<div>
+		<h2>Coverage Trend</h2>
+		<label>
+			<input type="checkbox" id="toggleTrend" checked>
+			Show regression trend
+		</label>
+		<div>
+		</div>
+	</div>
+	<div id="zoomControls" style="margin-top:8px;">
+		<input type="button" value="Refresh" onClick="refresh(this)">
+		<button id="resetZoomBtn" type="button">Reset Zoom</button>
+	</div>
+</div>
+
 <canvas id="coverageTrend" width="600" height="300"></canvas>
 <!-- Zoom controls for the trend chart -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -117,7 +133,7 @@ function linearRegression(data) {
 	}));
 }
 
-const dataPoints = [  ];
+const dataPoints = [ { x: "2025-12-28T15:49:52-05:00", y: 67.8807947019868, delta: 0, url: "https://github.com/nigelhorne/Geo-GeoNames/commit/8442bcf", label: "2025-12-28T15:49:52-05:00", pointBackgroundColor: "gray", comment: "Added link test dashboard to the README" } ];
 
 const regressionPoints = linearRegression(dataPoints);
 // Try to register the zoom plugin (handles different UMD builds)
@@ -378,7 +394,7 @@ function refresh(){
 <footer>
 	<p><span style="margin-left:8px;color:#666;font-size:0.9em;">Use mouse wheel or pinch to zoom; drag to pan</span></p>
 	<p>Project: <a href="https://github.com/nigelhorne/Geo-GeoNames">Geo-GeoNames</a></p>
-	<p><em>Last updated: 2025-12-28 20:52:47 - <a href="https://github.com/nigelhorne/Geo-GeoNames/commit/8442bcfd49f89114ea0d9c6af10e7d40c7827946">commit <code>8442bcf</code></a></em></p>
+	<p><em>Last updated: 2025-12-28 21:06:01 - <a href="https://github.com/nigelhorne/Geo-GeoNames/commit/7dda4dc40894f594b68c1309506e6e7cf297aabb">commit <code>7dda4dc</code></a></em></p>
 </footer>
 </body>
 </html>
