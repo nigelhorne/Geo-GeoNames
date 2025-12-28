@@ -9,6 +9,7 @@ Revision history for Perl module Geo::GeoNames
 	Check that the HTTP request was successful before attempting to parse the result
 	Verify HTTP code before attempting to parse the result
 	Improve the MIME type validation to be more strict and precise
+	Added test dashboard
 
 1.14	Fri Jun 10 05:08:22 EDT 2022
 	Start to use Test::Most

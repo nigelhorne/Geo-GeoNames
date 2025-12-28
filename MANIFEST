@@ -8,6 +8,7 @@ MANIFEST			This list of files
 MANIFEST.SKIP
 README.md
 README.pod
+scripts/generate_index.pl
 t/comment-spelling.t
 t/country.t
 t/eof.t
