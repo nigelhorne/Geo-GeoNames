@@ -4,7 +4,7 @@ Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
 # VERSION
 
-Version 1.14
+Version 1.15
 
 # SYNOPSIS
 
@@ -493,7 +493,7 @@ Per Henrik Johansen, `<per.henrik.johansen@gmail.com>`.
 Previously maintained by brian d foy, `<brian.d.foy@gmail.com>`
 and Nicolas Mendoza, `<mendoza@pvv.ntnu.no>`
 
-Maintained by Nigel Horne, `<njh at bandsman.co.uk>`
+Maintained by Nigel Horne, `<njh at nigelhorne.com>`
 
 # COPYRIGHT AND LICENSE
 

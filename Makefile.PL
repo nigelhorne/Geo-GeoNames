@@ -59,7 +59,7 @@ my %WriteMakefile = (
 	'ABSTRACT_FROM'    => $main_file,
 	'VERSION_FROM'     => $main_file,
 	# 'AUTHOR'           => 'Per Henrik Johansen <per.henrik.johansen@gmail.com>',
-	AUTHOR		=> q{Nigel Horne <njh@bandsman.co.uk>},
+	AUTHOR		=> q{Nigel Horne <njh@nigelhorne.com>},
 	'LICENSE'          => 'perl',
 
 	'CONFIGURE_REQUIRES' => {

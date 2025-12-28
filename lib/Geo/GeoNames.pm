@@ -16,11 +16,11 @@ Geo::GeoNames - Perform geographical queries using GeoNames Web Services
 
 =head1 VERSION
 
-Version 1.14
+Version 1.15
 
 =cut
 
-our $VERSION = '1.14';
+our $VERSION = '1.15';
 
 =head1 SYNOPSIS
 
@@ -991,7 +991,7 @@ Per Henrik Johansen, C<< <per.henrik.johansen@gmail.com> >>.
 Previously maintained by brian d foy, C<< <brian.d.foy@gmail.com> >>
 and Nicolas Mendoza, C<< <mendoza@pvv.ntnu.no> >>
 
-Maintained by Nigel Horne, C<< <njh at bandsman.co.uk> >>
+Maintained by Nigel Horne, C<< <njh at nigelhorne.com> >>
 
 =head1 COPYRIGHT AND LICENSE
 

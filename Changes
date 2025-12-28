@@ -1,6 +1,6 @@
 Revision history for Perl module Geo::GeoNames
 
-1.15
+1.15	Sun Dec 28 16:02:17 EST 2025
 	Use JSON::MaybeXS instead of JSON
 	Calling new on an object now returns a clone rather than setting the defaults in the new object
 	Use Test::DescribeMe to simplify tests
