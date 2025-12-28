@@ -1,0 +1,384 @@
+{
+   "runs" : [
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.07518,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.07486,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.25179,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.25159,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.41211,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.41181,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.57119,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.57091,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.73019,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.73001,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955158.88858,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955158.8884,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955159.05106,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955159.05085,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955159.2113,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955159.21108,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955159.38905,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955159.38001,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955167.0305,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955159.58196,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955159.72315,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "-e",
+         "start" : 1766955159.72306,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955159.95361,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/comment-spelling.t",
+         "start" : 1766955159.95338,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955160.41465,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/country.t",
+         "start" : 1766955160.41338,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955160.73746,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/eof.t",
+         "start" : 1766955160.73726,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955160.96594,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/eol.t",
+         "start" : 1766955160.96573,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955161.51998,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/Geo-GeoNames.t",
+         "start" : 1766955161.51858,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955162.08631,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/json.t",
+         "start" : 1766955162.08407,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955162.40343,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/pod-coverage.t",
+         "start" : 1766955162.40325,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955162.64208,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/pod-snippets.t",
+         "start" : 1766955162.64145,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955162.90522,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/pod-spelling.t",
+         "start" : 1766955162.90463,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955163.14497,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/pod-synopsis.t",
+         "start" : 1766955163.14475,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955163.37554,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/pod.t",
+         "start" : 1766955163.37529,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955163.84028,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/tz.t",
+         "start" : 1766955163.83876,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955164.34115,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/url.t",
+         "start" : 1766955164.16876,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955164.85887,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/useragent.t",
+         "start" : 1766955164.66275,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955166.09898,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/username.t",
+         "start" : 1766955165.18804,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955166.42706,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/vars.t",
+         "start" : 1766955166.42684,
+         "version" : "1.14"
+      },
+      {
+         "OS" : "linux",
+         "abstract" : "Perform geographical queries using GeoNames Web Services",
+         "dir" : "/home/runner/work/Geo-GeoNames/Geo-GeoNames",
+         "finish" : 1766955166.89738,
+         "name" : "Geo-GeoNames",
+         "perl" : "5.40.3",
+         "run" : "t/xml.t",
+         "start" : 1766955166.86931,
+         "version" : "1.14"
+      }
+   ],
+   "summary" : {
+      "Total" : {
+         "branch" : {
+            "covered" : 42,
+            "error" : 34,
+            "percentage" : 55.2631578947368,
+            "total" : 76,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 23,
+            "error" : 20,
+            "percentage" : 53.4883720930233,
+            "total" : 43,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 120,
+            "error" : 40,
+            "percentage" : 75,
+            "total" : 160
+         },
+         "subroutine" : {
+            "covered" : 20,
+            "error" : 3,
+            "percentage" : 86.9565217391304,
+            "total" : 23
+         },
+         "total" : {
+            "covered" : 205,
+            "error" : 97,
+            "percentage" : 67.8807947019868,
+            "total" : 302,
+            "uncoverable" : 0
+         }
+      },
+      "blib/lib/Geo/GeoNames.pm" : {
+         "branch" : {
+            "covered" : 42,
+            "error" : 34,
+            "percentage" : 55.2631578947368,
+            "total" : 76,
+            "uncoverable" : 0
+         },
+         "condition" : {
+            "covered" : 23,
+            "error" : 20,
+            "percentage" : 53.4883720930233,
+            "total" : 43,
+            "uncoverable" : 0
+         },
+         "statement" : {
+            "covered" : 120,
+            "error" : 40,
+            "percentage" : 75,
+            "total" : 160
+         },
+         "subroutine" : {
+            "covered" : 20,
+            "error" : 3,
+            "percentage" : 86.9565217391304,
+            "total" : 23
+         },
+         "total" : {
+            "covered" : 205,
+            "error" : 97,
+            "percentage" : 67.8807947019868,
+            "total" : 302,
+            "uncoverable" : 0
+         }
+      }
+   }
+}
