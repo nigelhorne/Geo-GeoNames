@@ -460,10 +460,11 @@ find\_nearest\_intersection(), and find\_nearby\_streets().
 
 # BUGS
 
+This module is provided as-is without any warranty.
+
 Not a bug, but the GeoNames services expects placenames to be UTF-8
-encoded, and all data received from the webservices are also UTF-8
-encoded. So make sure that strings are encoded/decoded based on the
-correct encoding.
+encoded, and all data received from the webservices are also UTF-8 encoded.
+So make sure that strings are encoded/decoded based on the correct encoding.
 
 Please report any bugs found or feature requests through GitHub issues
 [https://github.com/nigelhorne/Geo-GeoNames/issues](https://github.com/nigelhorne/Geo-GeoNames/issues).
@@ -476,6 +477,7 @@ automatically be notified of progress on your bug as I make changes.
 
 # SEE ALSO
 
+- Test coverage report: [https://nigelhorne.github.io/Geo-GeoNames/coverage/](https://nigelhorne.github.io/Geo-GeoNames/coverage/)
 - [http://www.geonames.org/export](http://www.geonames.org/export)
 - [http://www.geonames.org/export/ws-overview.html](http://www.geonames.org/export/ws-overview.html)
 
