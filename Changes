@@ -6,6 +6,7 @@ Revision history for Perl module Geo::GeoNames
 	Use Test::DescribeMe to simplify tests
 	Use Test::RequiresInternet
 	Fixed typo (minMagnutide now says minMagnitude)
+	Check that the HTTP request was successful before attempting to parse the result
 
 1.14	Fri Jun 10 05:08:22 EDT 2022
 	Start to use Test::Most

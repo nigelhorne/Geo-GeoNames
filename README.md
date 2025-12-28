@@ -390,7 +390,7 @@ You can also set your own User-Agent object:
     For a thorough description of the arguments, see
     [http://www.geonames.org/export](http://www.geonames.org/export)
 
-- hiearchy(arg => $arg)
+- hierarchy(arg => $arg)
 
     Returns all GeoNames higher up in the hierarchy of a place based on a geonameId.
 

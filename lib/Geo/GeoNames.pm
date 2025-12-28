@@ -431,7 +431,7 @@ sub _parse_text_result {
 	my @result;
 	$result[0]->{Result} = $geonamesresponse;
 	return \@result;
-	}
+}
 
 sub _request {
 	my ($self, $request_url) = @_;
@@ -440,6 +440,26 @@ sub _request {
 		$self->{'logger'}->trace('> ', ref($self), ": _request: $request_url");
 	}
 	my $res = $self->{ua}->get($request_url);
+
+	# Handle Mojo::UserAgent response
+	if($res->can('res')) {
+		my $response = $res->res();
+		unless($response->is_success) {
+			my $code = $response->code() || 'unknown';
+			my $message = $response->message() || 'HTTP request failed';
+			carp "HTTP request failed: $code $message for URL: $request_url";
+			return undef;
+		}
+		return $response;
+	}
+	
+	# Handle LWP::UserAgent response
+	unless ($res->is_success()) {
+		my $code = $res->code() || 'unknown';
+		my $message = $res->message() || 'HTTP request failed';
+		carp "HTTP request failed: $code $message for URL: $request_url";
+		return undef;
+	}
 
 	return $res->can('res') ? $res->res() : $res;
 }
@@ -465,12 +485,10 @@ sub _do_search {
 		if( $body =~ m/\A\{/ ) {
 		    if ($response->can('json')) {
 				return $response->json;
-				}
-			else {
+			} else {
 				return $self->_parse_json_result( $body );
 			}
-		}
-		else {
+		} else {
 			return $self->_parse_text_result( $body );
 			}
 		}
@@ -482,7 +500,7 @@ sub _do_search {
 	}
 
 	return [];
-	}
+}
 
 sub geocode {
 	my( $self, $q ) = @_;
@@ -843,7 +861,7 @@ B<geonamesId> must be supplied to this method. B<lang> and B<style> are optional
 For a thorough description of the arguments, see
 L<http://www.geonames.org/export>
 
-=item hiearchy(arg => $arg)
+=item hierarchy(arg => $arg)
 
 Returns all GeoNames higher up in the hierarchy of a place based on a geonameId.
 
