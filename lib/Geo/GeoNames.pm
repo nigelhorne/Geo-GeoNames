@@ -452,7 +452,7 @@ sub _request {
 		}
 		return $response;
 	}
-	
+
 	# Handle LWP::UserAgent response
 	unless ($res->is_success()) {
 		my $code = $res->code() || 'unknown';
@@ -484,16 +484,24 @@ sub _do_search {
 	# we accept text/xml, text/plain (how do see if it is JSON or not?)
 	my $mime_type = $response->headers->content_type || '';
 
+	# Extract just the base MIME type without parameters (e.g., charset)
+	my $base_mime_type = $mime_type;
+	$base_mime_type =~ s/;.*$//;	# Remove everything after semicolon
+	$base_mime_type =~ s/^\s+|\s+$//g;	# Trim whitespace
+
 	my $body = $response->can('body') ? $response->body() : $response->content;
 
-	if($mime_type =~ m(\Atext/xml;?) ) {
+	# Check for XML response
+	if($base_mime_type eq 'text/xml' || $base_mime_type eq 'application/xml') {
 		return $self->_parse_xml_result( $body, $searchtype eq 'get' );
 	}
-	if($mime_type =~ m(\Aapplication/json;?) ) {
+
+	# Check for JSON response
+	if($base_mime_type eq 'application/json') {
 		# a JSON object always start with a left-brace {
 		# according to http://json.org/
 		if( $body =~ m/\A\{/ ) {
-		    if ($response->can('json')) {
+			if ($response->can('json')) {
 				return $response->json;
 			} else {
 				return $self->_parse_json_result( $body );
@@ -503,13 +511,14 @@ sub _do_search {
 		}
 	}
 
-	if($mime_type eq 'text/plain') {
-		carp 'Invalid mime type [text/plain]. ', $response->content();
+	# Unexpected MIME type
+	if($base_mime_type eq 'text/plain') {
+		carp "Unexpected mime type [text/plain]. Response body: ", substr($body, 0, 200);
+	} elsif($base_mime_type eq 'text/html') {
+		carp "Received HTML response instead of expected data format. This may indicate an error page or service unavailability.";
 	} else {
-		carp "Invalid mime type [$mime_type]. Maybe you aren't connected.";
+		carp "Unsupported mime type [$mime_type]. Expected text/xml or application/json.";
 	}
-
-	return [];
 }
 
 sub geocode {
